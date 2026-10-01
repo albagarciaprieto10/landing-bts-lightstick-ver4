@@ -1,0 +1,1909 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BTS OFFICIAL LIGHT STICK VER.4 — La nueva luz de ARMY</title>
+
+  <meta
+    name="description"
+    content="Landing page del BTS OFFICIAL LIGHT STICK VER.4 con imágenes oficiales, características, contenido de la caja y guía de uso."
+  >
+
+  <meta property="og:title" content="BTS OFFICIAL LIGHT STICK VER.4">
+  <meta
+    property="og:description"
+    content="La nueva generación del light stick oficial de BTS."
+  >
+  <meta property="og:type" content="product">
+
+  <meta name="theme-color" content="#070707">
+
+  <style>
+    :root {
+      --bg: #070707;
+      --panel: #101010;
+      --panel-2: #151515;
+      --text: #f6f4f1;
+      --muted: #a6a3a0;
+      --line: #292929;
+      --accent: #b7a7ff;
+      --accent-2: #ece8ff;
+
+      --max: 1180px;
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrap {
+      width: min(calc(100% - 40px), var(--max));
+      margin: auto;
+    }
+
+    .eyebrow {
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      font-weight: 800;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    /* =========================
+       NAV
+    ========================= */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+
+      background: rgba(7, 7, 7, 0.78);
+      backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-inner {
+      height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      font-size: 0.86rem;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 24px;
+
+      color: #c8c5c2;
+      font-size: 0.9rem;
+    }
+
+    .navlinks a {
+      transition: 0.2s ease;
+    }
+
+    .navlinks a:hover {
+      color: white;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 9px;
+
+      border: 1px solid transparent;
+      border-radius: 999px;
+
+      padding: 13px 19px;
+
+      font-weight: 800;
+      font-size: 0.9rem;
+
+      transition: 0.22s ease;
+
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: #090909;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #fff;
+    }
+
+    .btn-ghost {
+      border-color: #3b3b3b;
+      color: white;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-ghost:hover {
+      background: #171717;
+      border-color: #555;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: calc(100vh - 72px);
+
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+
+      align-items: center;
+
+      gap: 54px;
+
+      padding: 70px 0 85px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.2rem, 7vw, 6.8rem);
+
+      line-height: 0.91;
+
+      letter-spacing: -0.065em;
+
+      margin: 16px 0 24px;
+
+      max-width: 760px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 1.5vw, 1.16rem);
+
+      color: #bbb8b4;
+
+      max-width: 600px;
+
+      margin: 0 0 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .trust {
+      display: flex;
+      gap: 18px;
+
+      flex-wrap: wrap;
+
+      margin-top: 25px;
+
+      color: #8f8c88;
+
+      font-size: 0.82rem;
+    }
+
+    .trust strong {
+      color: #d8d5d1;
+    }
+
+    .hero-visual {
+      position: relative;
+
+      min-height: 620px;
+
+      display: grid;
+      place-items: center;
+    }
+
+    .orb {
+      position: absolute;
+
+      width: min(520px, 80%);
+
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle at 50% 45%,
+          rgba(215, 207, 255, 0.34),
+          rgba(160, 145, 255, 0.11) 38%,
+          transparent 67%
+        );
+
+      filter: blur(4px);
+    }
+
+    .hero-img {
+      position: relative;
+
+      width: min(610px, 100%);
+
+      filter:
+        drop-shadow(
+          0 35px 55px rgba(0, 0, 0, 0.55)
+        );
+
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-head {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: end;
+
+      gap: 30px;
+
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 4vw, 4.1rem);
+
+      line-height: 1;
+
+      letter-spacing: -0.045em;
+
+      margin: 10px 0 0;
+    }
+
+    .section-head p {
+      max-width: 470px;
+
+      color: var(--muted);
+
+      margin: 0;
+    }
+
+    /* =========================
+       PROBLEM
+    ========================= */
+
+    .problem {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .problem-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 1px;
+
+      background: var(--line);
+    }
+
+    .problem-card {
+      background: var(--bg);
+
+      padding: 34px;
+    }
+
+    .num {
+      font-size: 0.75rem;
+
+      color: #777;
+
+      letter-spacing: 0.14em;
+    }
+
+    .problem-card h3 {
+      font-size: 1.35rem;
+
+      margin: 45px 0 9px;
+    }
+
+    .problem-card p {
+      color: var(--muted);
+
+      margin: 0;
+    }
+
+    /* =========================
+       SOLUTION
+    ========================= */
+
+    .solution {
+      background: #0a0a0a;
+    }
+
+    .feature-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.15fr 0.85fr;
+
+      gap: 28px;
+
+      align-items: stretch;
+    }
+
+    .feature-image {
+      border: 1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      overflow: hidden;
+
+      background: white;
+
+      min-height: 520px;
+
+      display: flex;
+
+      align-items: center;
+    }
+
+    .feature-image img {
+      width: 100%;
+    }
+
+    .feature-copy {
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      padding: 18px;
+    }
+
+    .feature-copy h3 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+
+      line-height: 1.02;
+
+      letter-spacing: -0.04em;
+
+      margin: 12px 0 18px;
+    }
+
+    .feature-copy p {
+      color: var(--muted);
+
+      font-size: 1.05rem;
+    }
+
+    .specs {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 12px;
+
+      margin-top: 28px;
+    }
+
+    .spec {
+      padding: 18px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 16px;
+
+      background: #0e0e0e;
+    }
+
+    .spec b {
+      display: block;
+
+      font-size: 0.8rem;
+
+      color: #777;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+      margin-bottom: 4px;
+    }
+
+    .spec span {
+      font-weight: 750;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns:
+        1.2fr 0.8fr 0.8fr;
+
+      gap: 14px;
+    }
+
+    .gallery figure {
+      margin: 0;
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      background: #111;
+
+      border: 1px solid var(--line);
+    }
+
+    .gallery figure:first-child {
+      grid-row: span 2;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .caption {
+      padding: 12px 14px;
+
+      color: #999;
+
+      font-size: 0.78rem;
+
+      background: #0c0c0c;
+    }
+
+    /* =========================
+       BENEFITS
+    ========================= */
+
+    .benefits {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 16px;
+    }
+
+    .benefit {
+      padding: 28px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #121212,
+          #0b0b0b
+        );
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+
+      border: 1px solid #393939;
+
+      border-radius: 12px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin-bottom: 42px;
+
+      color: var(--accent);
+    }
+
+    .benefit h3 {
+      margin: 0 0 9px;
+
+      font-size: 1.25rem;
+    }
+
+    .benefit p {
+      margin: 0;
+
+      color: var(--muted);
+    }
+
+    /* =========================
+       STEPS
+    ========================= */
+
+    .steps {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .step {
+      padding: 32px 26px;
+
+      border-right: 1px solid var(--line);
+    }
+
+    .step:last-child {
+      border-right: 0;
+    }
+
+    .step .big {
+      font-size: 4rem;
+
+      font-weight: 900;
+
+      letter-spacing: -0.06em;
+
+      color: #2e2e2e;
+    }
+
+    .step h3 {
+      margin: 8px 0;
+    }
+
+    .step p {
+      color: var(--muted);
+
+      margin: 0;
+    }
+
+    /* =========================
+       PACKAGE
+    ========================= */
+
+    .package {
+      display: grid;
+
+      grid-template-columns:
+        0.8fr 1.2fr;
+
+      gap: 40px;
+
+      align-items: center;
+    }
+
+    .package img {
+      border-radius: 24px;
+
+      border: 1px solid var(--line);
+
+      background: white;
+    }
+
+    .list {
+      display: grid;
+
+      gap: 12px;
+
+      margin-top: 25px;
+    }
+
+    .list div {
+      display: flex;
+
+      gap: 12px;
+
+      align-items: start;
+
+      color: #c9c6c2;
+    }
+
+    .list b {
+      color: var(--accent);
+    }
+
+    /* =========================
+       OFFER
+    ========================= */
+
+    .offer {
+      background: var(--text);
+
+      color: #090909;
+
+      border-radius: 32px;
+
+      padding: 55px;
+    }
+
+    .offer-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr auto;
+
+      align-items: center;
+
+      gap: 40px;
+    }
+
+    .offer h2 {
+      max-width: 720px;
+    }
+
+    .offer p {
+      color: #555;
+
+      max-width: 650px;
+    }
+
+    .offer .btn-primary {
+      background: #090909;
+
+      color: white;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      max-width: 850px;
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+
+      padding: 20px 0;
+    }
+
+    details:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    summary {
+      cursor: pointer;
+
+      list-style: none;
+
+      font-weight: 800;
+
+      font-size: 1.05rem;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary:after {
+      content: "+";
+
+      color: #888;
+    }
+
+    details[open] summary:after {
+      content: "−";
+    }
+
+    details p {
+      color: var(--muted);
+
+      max-width: 720px;
+
+      margin: 12px 0 0;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 40px 0 55px;
+
+      border-top: 1px solid var(--line);
+
+      color: #777;
+
+      font-size: 0.8rem;
+    }
+
+    .footer-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       ANIMATION
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(18px);
+
+      transition: 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform: none;
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .navlinks {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 45px;
+      }
+
+      .hero-visual {
+        min-height: 430px;
+      }
+
+      .feature-grid,
+      .package {
+        grid-template-columns: 1fr;
+      }
+
+      .problem-grid,
+      .benefits,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        border-right: 0;
+
+        border-bottom: 1px solid var(--line);
+      }
+
+      .step:last-child {
+        border-bottom: 0;
+      }
+
+      .gallery {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+      .gallery figure:first-child {
+        grid-column: span 2;
+
+        grid-row: auto;
+      }
+
+      .offer {
+        padding: 35px;
+      }
+
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .wrap {
+        width: min(
+          calc(100% - 28px),
+          var(--max)
+        );
+      }
+
+      .nav-inner {
+        height: 62px;
+      }
+
+      .hero h1 {
+        font-size: 3.35rem;
+      }
+
+      .hero-visual {
+        min-height: 330px;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 18px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery figure:first-child {
+        grid-column: auto;
+      }
+
+      .specs {
+        grid-template-columns: 1fr;
+      }
+
+      .offer {
+        border-radius: 22px;
+      }
+    }
+
+    /* =========================
+       REDUCED MOTION
+    ========================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header class="nav">
+
+    <div class="wrap nav-inner">
+
+      <a
+        class="brand"
+        href="#top"
+      >
+        BTS
+        <span>/ LIGHT STICK VER.4</span>
+      </a>
+
+      <nav
+        class="navlinks"
+        aria-label="Navegación principal"
+      >
+
+        <a href="#producto">
+          Producto
+        </a>
+
+        <a href="#detalles">
+          Detalles
+        </a>
+
+        <a href="#contenido">
+          Contenido
+        </a>
+
+        <a href="#faq">
+          FAQ
+        </a>
+
+      </nav>
+
+      <a
+        class="btn btn-primary"
+        href="https://shop.weverse.io/es/shop/USD/artists/2/sales/54189"
+        target="_blank"
+        rel="noopener"
+      >
+        Ver en Weverse ↗
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main id="top">
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="wrap hero">
+
+      <div class="reveal">
+
+        <div class="eyebrow">
+          BTS · OFFICIAL LIGHT STICK VER.4
+        </div>
+
+        <h1>
+          Una nueva forma de
+          <em>vivir la luz.</em>
+        </h1>
+
+        <p>
+          El light stick oficial de BTS evoluciona con un
+          diseño renovado, conectividad Bluetooth y modos
+          de iluminación pensados para acompañar la
+          experiencia de ARMY.
+        </p>
+
+        <div class="actions">
+
+          <a
+            class="btn btn-primary"
+            href="https://shop.weverse.io/es/shop/USD/artists/2/sales/54189"
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar disponibilidad
+          </a>
+
+          <a
+            class="btn btn-ghost"
+            href="#producto"
+          >
+            Descubrir Ver.4 ↓
+          </a>
+
+        </div>
+
+        <div class="trust">
+
+          <span>
+            <strong>Oficial</strong>
+            · Weverse Shop
+          </span>
+
+          <span>
+            <strong>2026</strong>
+            · nueva generación
+          </span>
+
+          <span>
+            <strong>3 × AAA</strong>
+            · pilas no incluidas
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual reveal">
+
+        <div class="orb"></div>
+
+        <img
+          class="hero-img"
+          src="https://cdn-contents.weverseshop.io/public/shop/b7c6a0dca150ebbb90e63f35b90fc915.png?q=95&w=720"
+          alt="BTS OFFICIAL LIGHT STICK VER.4 junto a su caja oficial"
+        >
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROBLEM
+    ========================= -->
+
+    <section class="problem">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div>
+
+            <div class="eyebrow">
+              La experiencia
+            </div>
+
+            <h2>
+              Más que un accesorio.
+            </h2>
+
+          </div>
+
+          <p>
+            Para un concierto, la luz forma parte del
+            espectáculo. Ver.4 está diseñada para que
+            el light stick sea también parte de ese
+            momento compartido.
+          </p>
+
+        </div>
+
+
+        <div class="problem-grid reveal">
+
+          <article class="problem-card">
+
+            <div class="num">
+              01 / CONEXIÓN
+            </div>
+
+            <h3>
+              Sentir el concierto en sincronía
+            </h3>
+
+            <p>
+              La Ver.4 incorpora control inalámbrico
+              para participar en los efectos de luz
+              del espectáculo cuando el concierto lo
+              permite.
+            </p>
+
+          </article>
+
+
+          <article class="problem-card">
+
+            <div class="num">
+              02 / IDENTIDAD
+            </div>
+
+            <h3>
+              Un diseño reconocible
+            </h3>
+
+            <p>
+              La esfera transparente y el símbolo de
+              BTS mantienen una silueta icónica mientras
+              incorporan una nueva construcción.
+            </p>
+
+          </article>
+
+
+          <article class="problem-card">
+
+            <div class="num">
+              03 / COLECCIÓN
+            </div>
+
+            <h3>
+              Un objeto para conservar
+            </h3>
+
+            <p>
+              Además del light stick, el paquete incluye
+              funda, correa, manual y siete instantáneas.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTO
+    ========================= -->
+
+    <section
+      id="producto"
+      class="solution"
+    >
+
+      <div class="wrap">
+
+        <div class="feature-grid">
+
+          <div class="feature-image reveal">
+
+            <img
+              src="https://cdn-contents.weverseshop.io/public/shop/37556e86a26596733ffa49f2b3ed85b0.jpg?q=95&w=720"
+              alt="Detalles del BTS OFFICIAL LIGHT STICK VER.4 en fondo negro"
+            >
+
+          </div>
+
+
+          <div class="feature-copy reveal">
+
+            <div class="eyebrow">
+              Diseñado para la nueva era
+            </div>
+
+            <h3>
+              La esfera cambia.
+              La conexión permanece.
+            </h3>
+
+            <p>
+              El diseño de Ver.4 permite utilizar piezas
+              superiores intercambiables específicas.
+              También integra distintos modos de iluminación
+              y conexión con la app oficial compatible.
+            </p>
+
+
+            <div class="specs">
+
+              <div class="spec">
+
+                <b>
+                  Dimensiones
+                </b>
+
+                <span>
+                  9,3 × 9,3 × 21,8 cm
+                </span>
+
+              </div>
+
+
+              <div class="spec">
+
+                <b>
+                  Material
+                </b>
+
+                <span>
+                  ABS + PC
+                </span>
+
+              </div>
+
+
+              <div class="spec">
+
+                <b>
+                  Alimentación
+                </b>
+
+                <span>
+                  3 pilas AAA
+                </span>
+
+              </div>
+
+
+              <div class="spec">
+
+                <b>
+                  Fabricación
+                </b>
+
+                <span>
+                  Corea del Sur
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALERÍA
+    ========================= -->
+
+    <section id="detalles">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div>
+
+            <div class="eyebrow">
+              Detalles oficiales
+            </div>
+
+            <h2>
+              Hecha para mirar.
+              Hecha para usar.
+            </h2>
+
+          </div>
+
+          <p>
+            Una selección de imágenes oficiales muestra
+            el diseño, el frontal y reverso, los detalles
+            de la esfera y los modos de iluminación.
+          </p>
+
+        </div>
+
+
+        <div class="gallery reveal">
+
+          <figure>
+
+            <img
+              src="https://cdn-contents.weverseshop.io/public/shop/8bf3835e131c7a774dad24ececb1f5bf.jpg?q=95&w=720"
+              alt="Vista frontal, trasera y detalles del BTS OFFICIAL LIGHT STICK VER.4"
+            >
+
+            <figcaption class="caption">
+              Vista frontal, trasera y detalles de la construcción.
+            </figcaption>
+
+          </figure>
+
+
+          <figure>
+
+            <img
+              src="https://cdn-contents.weverseshop.io/public/shop/0c1c6cd59aba72d871342536140cee9a.jpg?q=95&w=720"
+              alt="Guía visual de uso y modos de iluminación del light stick"
+            >
+
+            <figcaption class="caption">
+              Guía visual de uso y modos de iluminación.
+            </figcaption>
+
+          </figure>
+
+
+          <figure>
+
+            <img
+              src="https://cdn-contents.weverseshop.io/public/shop/b7c6a0dca150ebbb90e63f35b90fc915.png?q=95&w=720"
+              alt="Light stick y caja oficial"
+            >
+
+            <figcaption class="caption">
+              Light stick + packaging oficial.
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BENEFICIOS
+    ========================= -->
+
+    <section>
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div>
+
+            <div class="eyebrow">
+              Beneficios
+            </div>
+
+            <h2>
+              Lo esencial,
+              sin complicarlo.
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="benefits reveal">
+
+          <article class="benefit">
+
+            <div class="icon">
+              ✦
+            </div>
+
+            <h3>
+              Control inalámbrico
+            </h3>
+
+            <p>
+              La Ver.4 admite control inalámbrico en
+              los conciertos compatibles, para que la
+              luz pueda formar parte del espectáculo.
+            </p>
+
+          </article>
+
+
+          <article class="benefit">
+
+            <div class="icon">
+              ◌
+            </div>
+
+            <h3>
+              Bluetooth + app
+            </h3>
+
+            <p>
+              La app oficial permite conectar el light
+              stick, consultar conciertos compatibles
+              y realizar actualizaciones.
+            </p>
+
+          </article>
+
+
+          <article class="benefit">
+
+            <div class="icon">
+              ◇
+            </div>
+
+            <h3>
+              Modos de luz
+            </h3>
+
+            <p>
+              Incluye diferentes colores y patrones
+              de iluminación para utilizar el dispositivo
+              fuera y dentro del recinto.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================= -->
+
+    <section class="solution">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div>
+
+            <div class="eyebrow">
+              Cómo funciona
+            </div>
+
+            <h2>
+              Prepararla es sencillo.
+            </h2>
+
+          </div>
+
+          <p>
+            El flujo básico está pensado para que
+            puedas llegar al concierto con el dispositivo
+            listo.
+          </p>
+
+        </div>
+
+
+        <div class="steps reveal">
+
+          <article class="step">
+
+            <div class="big">
+              01
+            </div>
+
+            <h3>
+              Coloca las pilas
+            </h3>
+
+            <p>
+              Utiliza tres pilas alcalinas AAA nuevas.
+              No están incluidas en el producto.
+            </p>
+
+          </article>
+
+
+          <article class="step">
+
+            <div class="big">
+              02
+            </div>
+
+            <h3>
+              Conecta cuando corresponda
+            </h3>
+
+            <p>
+              La app Ver.4 permite conectarlo mediante
+              Bluetooth y consultar si el próximo concierto
+              requiere emparejamiento.
+            </p>
+
+          </article>
+
+
+          <article class="step">
+
+            <div class="big">
+              03
+            </div>
+
+            <h3>
+              Enciende y disfruta
+            </h3>
+
+            <p>
+              En los conciertos compatibles, el control
+              inalámbrico puede realizarse automáticamente
+              según las indicaciones oficiales del evento.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTENIDO
+    ========================= -->
+
+    <section id="contenido">
+
+      <div class="wrap">
+
+        <div class="package">
+
+          <div class="reveal">
+
+            <div class="eyebrow">
+              Dentro de la caja
+            </div>
+
+            <h2>
+              Todo lo que necesitas
+              para empezar.
+            </h2>
+
+
+            <div class="list">
+
+              <div>
+                <b>01</b>
+                <span>
+                  1 × BTS OFFICIAL LIGHT STICK VER.4
+                </span>
+              </div>
+
+              <div>
+                <b>02</b>
+                <span>
+                  1 × Dust bag
+                </span>
+              </div>
+
+              <div>
+                <b>03</b>
+                <span>
+                  1 × Strap
+                </span>
+              </div>
+
+              <div>
+                <b>04</b>
+                <span>
+                  1 × Manual
+                </span>
+              </div>
+
+              <div>
+                <b>05</b>
+                <span>
+                  7 × Instant photos
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="reveal">
+
+            <img
+              src="https://cdn-contents.weverseshop.io/public/shop/37556e86a26596733ffa49f2b3ed85b0.jpg?q=95&w=720"
+              alt="Presentación del BTS OFFICIAL LIGHT STICK VER.4"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA / OFERTA
+    ========================= -->
+
+    <section>
+
+      <div class="wrap">
+
+        <div class="offer reveal">
+
+          <div class="offer-grid">
+
+            <div>
+
+              <div
+                class="eyebrow"
+                style="color:#666"
+              >
+                Disponible en canales oficiales
+              </div>
+
+              <h2>
+                Tu próxima experiencia
+                empieza con una luz.
+              </h2>
+
+              <p>
+                Consulta la disponibilidad, el precio
+                aplicable a tu región y las condiciones
+                de envío directamente en Weverse Shop.
+              </p>
+
+            </div>
+
+
+            <a
+              class="btn btn-primary"
+              href="https://shop.weverse.io/es/shop/USD/artists/2/sales/54189"
+              target="_blank"
+              rel="noopener"
+            >
+              Ir a Weverse ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================= -->
+
+    <section id="faq">
+
+      <div class="wrap">
+
+        <div class="section-head reveal">
+
+          <div>
+
+            <div class="eyebrow">
+              FAQ
+            </div>
+
+            <h2>
+              Antes de comprar.
+            </h2>
+
+          </div>
+
+          <p>
+            Información basada en la ficha y las
+            indicaciones oficiales de Weverse.
+            Consulta siempre la página oficial
+            para condiciones actualizadas.
+          </p>
+
+        </div>
+
+
+        <div class="faq reveal">
+
+          <details>
+
+            <summary>
+              ¿Qué es el BTS OFFICIAL LIGHT STICK VER.4?
+            </summary>
+
+            <p>
+              Es la cuarta versión del light stick
+              oficial de BTS, con un diseño actualizado
+              y funciones de conexión y control inalámbrico.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              ¿Qué pilas necesita?
+            </summary>
+
+            <p>
+              Necesita tres pilas alcalinas AAA,
+              que no están incluidas.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              ¿Se puede conectar al móvil?
+            </summary>
+
+            <p>
+              Sí. La aplicación oficial BTS Official
+              Light Stick Ver.4 permite conectar el
+              dispositivo mediante Bluetooth y ofrece
+              funciones como Concert Mode y actualización
+              del light stick.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              ¿Funciona automáticamente en los conciertos?
+            </summary>
+
+            <p>
+              Depende de las indicaciones de cada concierto.
+              Para algunos eventos, HYBE indica que la Ver.4
+              puede controlarse inalámbricamente al encenderla,
+              sin emparejarla con el asiento.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              ¿Qué incluye la caja?
+            </summary>
+
+            <p>
+              Light stick, dust bag, strap, manual
+              y siete instant photos.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+              ¿Dónde puedo consultar el precio y la disponibilidad?
+            </summary>
+
+            <p>
+              La disponibilidad y el precio pueden variar
+              según región y momento. La landing enlaza a
+              la ficha oficial de Weverse Shop para consultar
+              la información vigente.
+            </p>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="wrap footer-row">
+
+      <div>
+        © 2026 · Concepto de landing para
+        BTS OFFICIAL LIGHT STICK VER.4
+      </div>
+
+      <div>
+
+        <a
+          href="https://shop.weverse.io/"
+          target="_blank"
+          rel="noopener"
+        >
+          Fuente / compra oficial:
+          Weverse Shop ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    const observer =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(element => {
+
+        observer.observe(element);
+
+      });
+
+  </script>
+
+</body>
+</html>
